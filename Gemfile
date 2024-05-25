@@ -6,7 +6,16 @@ source "https://rubygems.org"
 gemspec
 
 gem "rake", "~> 13.0"
+gem 'nokogiri-happymapper'
 
-gem "minitest", "~> 5.0"
+group :development do
+  gem "rubocop", "~> 1.21"
+end
 
-gem "rubocop", "~> 1.21"
+group :test do
+  gem "minitest", "~> 5.0"
+  gem "webmock"
+  gem 'minitest-power_assert'
+  gem 'pry'
+  gem 'simplecov', require: false
+end
