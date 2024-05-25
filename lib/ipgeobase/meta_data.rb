@@ -8,9 +8,9 @@ module Ipgeobase
     IP_API = 'http://ip-api.com/xml/'
 
     def self.make_request(ip)
-      uri = URI(IP_API + ip)
-      response = Net::HTTP.get_response(uri)
-      data = HappyMapper.parse(response.body)
+      uri = Addressable::URI.parse(IP_API + ip)
+      response = Net::HTTP.get(uri.host, uri.path)
+      data = HappyMapper.parse(response)
       {
         city: data.city,
         country: data.country,
