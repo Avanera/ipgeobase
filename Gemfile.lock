@@ -25,6 +25,8 @@ GEM
       power_assert (>= 1.1)
     nokogiri (1.16.5-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.16.5-x86_64-linux)
+      racc (~> 1.4)
     nokogiri-happymapper (0.10.0)
       nokogiri (~> 1.5)
     parallel (1.24.0)
@@ -71,6 +73,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   ipgeobase!
